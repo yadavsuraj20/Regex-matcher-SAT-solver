@@ -165,4 +165,8 @@
     (Graph (firstpos t) (nodes t) (trans t) (rednodes t) (symbols t)))
   (buildGraph1 (maketree reg)))    
 
+; Testcase
+(define r "(a|b)*bba | cc*")
+(define graph (buildGraph r))
+(matches? graph "bbab")
 
